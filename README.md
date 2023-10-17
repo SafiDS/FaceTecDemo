@@ -35,7 +35,7 @@ At the root of your project, create a file named `react-native.config.js`. Add t
 
 ```javascript
 module.exports = {
-  assets: ['./src/assets/facetec/app_store.png'],
+   assets: ['./src/assets/facetec/app_store.png'],
 };
 
 ```
@@ -62,8 +62,8 @@ import RNFaceTec from 'nativeModule/RNFaceTec';
 // ...
 
 RNFaceTec.setCustomization({
-  Colors: themeColors,
-  brandLogoName: 'app_store',
+   Colors: themeColors,
+   brandLogoName: 'app_store',
 });
 
 
