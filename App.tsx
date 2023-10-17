@@ -1,96 +1,177 @@
-import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text, TouchableOpacity,
-  useColorScheme,
-  View,
-} from 'react-native';
+import React, {useCallback, useEffect, useState} from 'react';
+import {Alert, StyleSheet, View} from 'react-native';
+import {Button, Loader} from './src/components';
+import RNFaceTec from './src/nativeModule/RNFaceTec';
+import {EventsButtons, sdkConfig} from './src/utils/constant';
+import {Type_Of_Native_Method} from './src/utils/enum';
+import Methods from './src/utils/methods';
 
-import {
-  Colors,
-  Header,
-} from 'react-native/Libraries/NewAppScreen';
-import CustomButton from "./src/components/customButton";
+const themeColors = {
+  outerBackgroundColor: '#EFEFEF',
+  frameColor: '#DDDDDD',
+  borderColor: '#FF5733',
+  ovalColor: '#3498db',
+  dualSpinnerColor: '#27AE60',
+  textColor: '#9B59B6',
+  buttonAndFeedbackBarColor: '#F39C12',
+  buttonAndFeedbackBarTextColor: '#2C3E50',
+  buttonColorHighlight: '#E74C3C',
+  buttonColorDisabled: '#3498db',
+};
 
+const App = () => {
+  const [enrollUserId, setEnrollUserId] = useState('');
+  const [isInitializingSDK, setInitializingSDK] = useState(true);
 
-function App(): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
+  const [isProcessing, setProcessing] = useState(false);
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+  useEffect(() => {
+    updateTheme();
+    RNFaceTec.initializeSDK(
+      sdkConfig,
+      () => {
+        setInitializingSDK(false);
+      },
+      () => {
+        setInitializingSDK(false);
+      },
+    );
+  }, []);
+
+  const updateTheme = () => {
+    RNFaceTec.setCustomization({
+      Colors: themeColors,
+      brandLogoName: 'app_store',
+    });
   };
 
-  const handle3dLiveNessPress = () => {
-    console.log("handle3dLivenessPress clicked!");
+  const handleLivenessCheckPress = useCallback(() => {
+    setProcessing(true);
+    RNFaceTec.livenessCheck(
+      res => {
+        setProcessing(false);
+        console.log('[FaceTec-LivenessCheck]', res);
+      },
+      e => {
+        setProcessing(false);
+        console.log('[FaceTec-LivenessCheck]-Error!', e);
+      },
+    );
+  }, []);
+
+  const handleEnrollUserPress = useCallback(() => {
+    setProcessing(true);
+    setEnrollUserId('');
+    const id = Methods.generateRandomId(8);
+
+    RNFaceTec.enrollUser(
+      id,
+      res => {
+        setProcessing(false);
+        setEnrollUserId(id);
+        console.log('[FaceTec-Enroll User]', res);
+      },
+      e => {
+        setProcessing(false);
+        console.log('[FaceTec-Enroll User]-Error!', e);
+      },
+    );
+  }, []);
+
+  const handleAuthenticateUserPress = useCallback(() => {
+    if (!enrollUserId) {
+      Alert.alert('Please enroll first before trying authentication.');
+      return;
+    }
+    setProcessing(true);
+    RNFaceTec.authenticateUser(
+      enrollUserId,
+      res => {
+        setProcessing(false);
+        console.log('[FaceTec-Authenticate User]', res);
+      },
+      e => {
+        setProcessing(false);
+        console.log('[FaceTec-Authenticate User]-Error!', e);
+      },
+    );
+  }, [enrollUserId]);
+
+  const handleIdentityCheckUserPress = useCallback(() => {
+    setProcessing(true);
+    RNFaceTec.identityCheck(
+      res => {
+        setProcessing(false);
+        console.log('[FaceTec-Identity Check]', res);
+      },
+      e => {
+        setProcessing(false);
+        console.log('[FaceTec-Identity Check]-Error!', e);
+      },
+    );
+  }, []);
+
+  const handleIdentityScanUserPress = useCallback(() => {
+    setProcessing(true);
+    RNFaceTec.identityScanOnly(
+      res => {
+        setProcessing(false);
+        console.log('[FaceTec-Identity Scan]', res);
+      },
+      e => {
+        setProcessing(false);
+        console.log('[FaceTec-Identity Scan]-Error!', e);
+      },
+    );
+  }, []);
+
+  const onButtonPress = (text: string, index: number) => {
+    switch (index) {
+      case Type_Of_Native_Method.livenessCheck:
+        handleLivenessCheckPress();
+        break;
+      case Type_Of_Native_Method.enrollUser:
+        handleEnrollUserPress();
+        break;
+      case Type_Of_Native_Method.authenticateUser:
+        handleAuthenticateUserPress();
+        break;
+      case Type_Of_Native_Method.matchFaceToID:
+        handleIdentityCheckUserPress();
+        break;
+      case Type_Of_Native_Method.scanAndOCRID:
+        handleIdentityScanUserPress();
+        break;
+    }
   };
 
-  const handleEnrollUserPress = () => {
-    console.log("handleEnrollUserPress clicked!");
-  };
-
-  const handleAuthenticateUserPress = () => {
-    console.log("handleAuthenticateUserPress clicked!");
-  };
-
-  const handleMatchFaceIDClick = () => {
-    console.log("handleMatchFaceIDClick clicked!");
-  };
-
-  const handleScanIDClick = () => {
-    console.log("Scan & OCRID clicked!");
+  const renderButtonComponent = (title: string, index: number) => {
+    return (
+      <Button
+        key={`button list-${index}`}
+        title={title}
+        index={index}
+        onButtonPress={onButtonPress}
+        disabled={isProcessing}
+      />
+    );
   };
 
   return (
-    <SafeAreaView style={styles.container}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-        <View style={styles.container}>
-          <CustomButton title="3D Liveness Check" onPress={() => handle3dLiveNessPress()} />
-          <CustomButton title="Enroll User" onPress={() => handleEnrollUserPress()} />
-          <CustomButton title="Authenticate User" onPress={() => handleAuthenticateUserPress()} />
-          <CustomButton title="Match Face To ID" onPress={() => handleMatchFaceIDClick()} />
-          <CustomButton title="Scan & OCR ID" onPress={() => handleScanIDClick()} />
-        </View>
-    </SafeAreaView>
+    <View style={styles.container}>
+      {isInitializingSDK ? (
+        <Loader />
+      ) : (
+        EventsButtons.map(renderButtonComponent)
+      )}
+    </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  button: {
-    backgroundColor: '#4CAF50',
-    padding: 10,
-    borderRadius: 8,
-    alignItems: 'center',
-  },
-  buttonText: {
-    color: 'white',
-    fontSize: 16,
-  },
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
   },
 });
 

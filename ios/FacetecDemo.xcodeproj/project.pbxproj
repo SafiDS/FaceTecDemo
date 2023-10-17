@@ -7,11 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		005E78A82AD44DFE00B870D0 /* FacetecManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005E78A72AD44DFE00B870D0 /* FacetecManager.swift */; };
+		005E78AA2AD44E2E00B870D0 /* Facetec.m in Sources */ = {isa = PBXBuildFile; fileRef = 005E78A92AD44E2E00B870D0 /* Facetec.m */; };
+		005E78B72AD458D100B870D0 /* LivenessCheckProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005E78AF2AD458D000B870D0 /* LivenessCheckProcessor.swift */; };
+		005E78B82AD458D100B870D0 /* ProcesingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005E78B02AD458D000B870D0 /* ProcesingDelegate.swift */; };
+		005E78B92AD458D100B870D0 /* AuthenticateProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005E78B12AD458D000B870D0 /* AuthenticateProcessor.swift */; };
+		005E78BA2AD458D100B870D0 /* PhotoIDMatchProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005E78B22AD458D000B870D0 /* PhotoIDMatchProcessor.swift */; };
+		005E78BB2AD458D100B870D0 /* EnrollmentProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005E78B32AD458D000B870D0 /* EnrollmentProcessor.swift */; };
+		005E78BD2AD458D100B870D0 /* PhotoIDScanProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005E78B62AD458D000B870D0 /* PhotoIDScanProcessor.swift */; };
+		005E78BF2AD45A4300B870D0 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005E78BE2AD45A4300B870D0 /* Config.swift */; };
+		005E78DB2AD4675A00B870D0 /* PseudoFullscreenSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005E78C52AD4675A00B870D0 /* PseudoFullscreenSuccessView.swift */; };
+		005E78DC2AD4675A00B870D0 /* EKYCActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005E78C62AD4675A00B870D0 /* EKYCActivityIndicatorView.swift */; };
+		005E78DD2AD4675A00B870D0 /* EKYCSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005E78C72AD4675A00B870D0 /* EKYCSuccessView.swift */; };
+		005E78DE2AD4675A00B870D0 /* NFCCardScanningAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005E78C82AD4675A00B870D0 /* NFCCardScanningAnimationView.swift */; };
+		005E78DF2AD4675A00B870D0 /* AdditionalReviewAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005E78C92AD4675A00B870D0 /* AdditionalReviewAnimationView.swift */; };
+		005E78E02AD4675A00B870D0 /* AdditionalReviewAnimationViewRed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005E78CA2AD4675A00B870D0 /* AdditionalReviewAnimationViewRed.swift */; };
+		005E78E12AD4675A00B870D0 /* PseudoFullscreenUnsuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005E78CB2AD4675A00B870D0 /* PseudoFullscreenUnsuccessView.swift */; };
+		005E78E22AD4675A00B870D0 /* NFCScanningAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005E78CC2AD4675A00B870D0 /* NFCScanningAnimationView.swift */; };
+		005E78E32AD4675A00B870D0 /* NFCScanningAnimationViewGreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005E78CD2AD4675A00B870D0 /* NFCScanningAnimationViewGreen.swift */; };
+		005E78E42AD4675A00B870D0 /* EKYCScrollIndicatorAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005E78CE2AD4675A00B870D0 /* EKYCScrollIndicatorAnimationView.swift */; };
+		005E78E52AD4675A00B870D0 /* NFCScanningAnimationViewBlack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005E78CF2AD4675A00B870D0 /* NFCScanningAnimationViewBlack.swift */; };
+		005E78E62AD4675A00B870D0 /* WellRoundedActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005E78D02AD4675A00B870D0 /* WellRoundedActivityIndicatorView.swift */; };
+		005E78E72AD4675A00B870D0 /* WellRoundedUnsuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005E78D12AD4675A00B870D0 /* WellRoundedUnsuccessView.swift */; };
+		005E78E82AD4675A00B870D0 /* PseudoFullscreenActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005E78D22AD4675A00B870D0 /* PseudoFullscreenActivityIndicatorView.swift */; };
+		005E78E92AD4675A00B870D0 /* NFCScanningAnimationViewRed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005E78D32AD4675A00B870D0 /* NFCScanningAnimationViewRed.swift */; };
+		005E78EA2AD4675A00B870D0 /* NFCCardStartingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005E78D42AD4675A00B870D0 /* NFCCardStartingAnimationView.swift */; };
+		005E78EB2AD4675A00B870D0 /* WellRoundedSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005E78D52AD4675A00B870D0 /* WellRoundedSuccessView.swift */; };
+		005E78EC2AD4675A00B870D0 /* EKYCUnsuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005E78D62AD4675A00B870D0 /* EKYCUnsuccessView.swift */; };
+		005E78ED2AD4675A00B870D0 /* AdditionalReviewAnimationViewOrange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005E78D72AD4675A00B870D0 /* AdditionalReviewAnimationViewOrange.swift */; };
+		005E78EE2AD4675A00B870D0 /* NFCStartingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005E78D82AD4675A00B870D0 /* NFCStartingAnimationView.swift */; };
+		005E78EF2AD4675A00B870D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 005E78D92AD4675A00B870D0 /* Assets.xcassets */; };
+		008F5E942AD5259F007E2EFE /* FaceTecSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 008F5E932AD5259F007E2EFE /* FaceTecSDK.xcframework */; };
+		008F5E952AD5259F007E2EFE /* FaceTecSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 008F5E932AD5259F007E2EFE /* FaceTecSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0092AC682ADE68FD00987100 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092AC672ADE68FD00987100 /* UIColor.swift */; };
 		00E356F31AD99517003FC87E /* FacetecDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* FacetecDemoTests.m */; };
 		0C80B921A6F3F58F76C31292 /* libPods-FacetecDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-FacetecDemo.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		2AF8203931E14A69894DBD18 /* app_store.png in Resources */ = {isa = PBXBuildFile; fileRef = A55CCE8FE7CA4FF5B6A2768D /* app_store.png */; };
 		7699B88040F8A987B510C191 /* libPods-FacetecDemo-FacetecDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-FacetecDemo-FacetecDemoTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -26,7 +60,54 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		005E78F32AD4691300B870D0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				008F5E952AD5259F007E2EFE /* FaceTecSDK.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		005E78A42AD44CB500B870D0 /* FacetecDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FacetecDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		005E78A72AD44DFE00B870D0 /* FacetecManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FacetecManager.swift; path = FacetecDemo/FacetecManager.swift; sourceTree = "<group>"; };
+		005E78A92AD44E2E00B870D0 /* Facetec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Facetec.m; path = FacetecDemo/Facetec.m; sourceTree = "<group>"; };
+		005E78AF2AD458D000B870D0 /* LivenessCheckProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivenessCheckProcessor.swift; sourceTree = "<group>"; };
+		005E78B02AD458D000B870D0 /* ProcesingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcesingDelegate.swift; sourceTree = "<group>"; };
+		005E78B12AD458D000B870D0 /* AuthenticateProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticateProcessor.swift; sourceTree = "<group>"; };
+		005E78B22AD458D000B870D0 /* PhotoIDMatchProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoIDMatchProcessor.swift; sourceTree = "<group>"; };
+		005E78B32AD458D000B870D0 /* EnrollmentProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnrollmentProcessor.swift; sourceTree = "<group>"; };
+		005E78B62AD458D000B870D0 /* PhotoIDScanProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoIDScanProcessor.swift; sourceTree = "<group>"; };
+		005E78BE2AD45A4300B870D0 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Config.swift; path = FacetecDemo/Config.swift; sourceTree = "<group>"; };
+		005E78C52AD4675A00B870D0 /* PseudoFullscreenSuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PseudoFullscreenSuccessView.swift; sourceTree = "<group>"; };
+		005E78C62AD4675A00B870D0 /* EKYCActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EKYCActivityIndicatorView.swift; sourceTree = "<group>"; };
+		005E78C72AD4675A00B870D0 /* EKYCSuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EKYCSuccessView.swift; sourceTree = "<group>"; };
+		005E78C82AD4675A00B870D0 /* NFCCardScanningAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCCardScanningAnimationView.swift; sourceTree = "<group>"; };
+		005E78C92AD4675A00B870D0 /* AdditionalReviewAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionalReviewAnimationView.swift; sourceTree = "<group>"; };
+		005E78CA2AD4675A00B870D0 /* AdditionalReviewAnimationViewRed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionalReviewAnimationViewRed.swift; sourceTree = "<group>"; };
+		005E78CB2AD4675A00B870D0 /* PseudoFullscreenUnsuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PseudoFullscreenUnsuccessView.swift; sourceTree = "<group>"; };
+		005E78CC2AD4675A00B870D0 /* NFCScanningAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCScanningAnimationView.swift; sourceTree = "<group>"; };
+		005E78CD2AD4675A00B870D0 /* NFCScanningAnimationViewGreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCScanningAnimationViewGreen.swift; sourceTree = "<group>"; };
+		005E78CE2AD4675A00B870D0 /* EKYCScrollIndicatorAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EKYCScrollIndicatorAnimationView.swift; sourceTree = "<group>"; };
+		005E78CF2AD4675A00B870D0 /* NFCScanningAnimationViewBlack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCScanningAnimationViewBlack.swift; sourceTree = "<group>"; };
+		005E78D02AD4675A00B870D0 /* WellRoundedActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WellRoundedActivityIndicatorView.swift; sourceTree = "<group>"; };
+		005E78D12AD4675A00B870D0 /* WellRoundedUnsuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WellRoundedUnsuccessView.swift; sourceTree = "<group>"; };
+		005E78D22AD4675A00B870D0 /* PseudoFullscreenActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PseudoFullscreenActivityIndicatorView.swift; sourceTree = "<group>"; };
+		005E78D32AD4675A00B870D0 /* NFCScanningAnimationViewRed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCScanningAnimationViewRed.swift; sourceTree = "<group>"; };
+		005E78D42AD4675A00B870D0 /* NFCCardStartingAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCCardStartingAnimationView.swift; sourceTree = "<group>"; };
+		005E78D52AD4675A00B870D0 /* WellRoundedSuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WellRoundedSuccessView.swift; sourceTree = "<group>"; };
+		005E78D62AD4675A00B870D0 /* EKYCUnsuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EKYCUnsuccessView.swift; sourceTree = "<group>"; };
+		005E78D72AD4675A00B870D0 /* AdditionalReviewAnimationViewOrange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionalReviewAnimationViewOrange.swift; sourceTree = "<group>"; };
+		005E78D82AD4675A00B870D0 /* NFCStartingAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCStartingAnimationView.swift; sourceTree = "<group>"; };
+		005E78D92AD4675A00B870D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		008F5E932AD5259F007E2EFE /* FaceTecSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FaceTecSDK.xcframework; path = "FacetecDemo/Framework/FaceTecSDK-ios-9.6.54/FaceTecSDK.xcframework"; sourceTree = "<group>"; };
+		0092AC672ADE68FD00987100 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		00E356EE1AD99517003FC87E /* FacetecDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacetecDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* FacetecDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FacetecDemoTests.m; sourceTree = "<group>"; };
@@ -43,6 +124,7 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-FacetecDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FacetecDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = FacetecDemo/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-FacetecDemo-FacetecDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacetecDemo-FacetecDemoTests.release.xcconfig"; path = "Target Support Files/Pods-FacetecDemo-FacetecDemoTests/Pods-FacetecDemo-FacetecDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		A55CCE8FE7CA4FF5B6A2768D /* app_store.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = app_store.png; path = ../src/assets/facetec/app_store.png; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -59,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				008F5E942AD5259F007E2EFE /* FaceTecSDK.xcframework in Frameworks */,
 				0C80B921A6F3F58F76C31292 /* libPods-FacetecDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,6 +149,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		005E78AB2AD458A000B870D0 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0092AC672ADE68FD00987100 /* UIColor.swift */,
+			);
+			name = Utilities;
+			path = FacetecDemo/Utilities;
+			sourceTree = "<group>";
+		};
+		005E78AE2AD458D000B870D0 /* Processors */ = {
+			isa = PBXGroup;
+			children = (
+				005E78AF2AD458D000B870D0 /* LivenessCheckProcessor.swift */,
+				005E78B02AD458D000B870D0 /* ProcesingDelegate.swift */,
+				005E78B12AD458D000B870D0 /* AuthenticateProcessor.swift */,
+				005E78B22AD458D000B870D0 /* PhotoIDMatchProcessor.swift */,
+				005E78B32AD458D000B870D0 /* EnrollmentProcessor.swift */,
+				005E78B62AD458D000B870D0 /* PhotoIDScanProcessor.swift */,
+			);
+			name = Processors;
+			path = FacetecDemo/Processors;
+			sourceTree = "<group>";
+		};
+		005E78C32AD4675A00B870D0 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				005E78C42AD4675A00B870D0 /* ThemeViews */,
+				005E78D92AD4675A00B870D0 /* Assets.xcassets */,
+			);
+			name = SupportingFiles;
+			path = FacetecDemo/SupportingFiles;
+			sourceTree = "<group>";
+		};
+		005E78C42AD4675A00B870D0 /* ThemeViews */ = {
+			isa = PBXGroup;
+			children = (
+				005E78C52AD4675A00B870D0 /* PseudoFullscreenSuccessView.swift */,
+				005E78C62AD4675A00B870D0 /* EKYCActivityIndicatorView.swift */,
+				005E78C72AD4675A00B870D0 /* EKYCSuccessView.swift */,
+				005E78C82AD4675A00B870D0 /* NFCCardScanningAnimationView.swift */,
+				005E78C92AD4675A00B870D0 /* AdditionalReviewAnimationView.swift */,
+				005E78CA2AD4675A00B870D0 /* AdditionalReviewAnimationViewRed.swift */,
+				005E78CB2AD4675A00B870D0 /* PseudoFullscreenUnsuccessView.swift */,
+				005E78CC2AD4675A00B870D0 /* NFCScanningAnimationView.swift */,
+				005E78CD2AD4675A00B870D0 /* NFCScanningAnimationViewGreen.swift */,
+				005E78CE2AD4675A00B870D0 /* EKYCScrollIndicatorAnimationView.swift */,
+				005E78CF2AD4675A00B870D0 /* NFCScanningAnimationViewBlack.swift */,
+				005E78D02AD4675A00B870D0 /* WellRoundedActivityIndicatorView.swift */,
+				005E78D12AD4675A00B870D0 /* WellRoundedUnsuccessView.swift */,
+				005E78D22AD4675A00B870D0 /* PseudoFullscreenActivityIndicatorView.swift */,
+				005E78D32AD4675A00B870D0 /* NFCScanningAnimationViewRed.swift */,
+				005E78D42AD4675A00B870D0 /* NFCCardStartingAnimationView.swift */,
+				005E78D52AD4675A00B870D0 /* WellRoundedSuccessView.swift */,
+				005E78D62AD4675A00B870D0 /* EKYCUnsuccessView.swift */,
+				005E78D72AD4675A00B870D0 /* AdditionalReviewAnimationViewOrange.swift */,
+				005E78D82AD4675A00B870D0 /* NFCStartingAnimationView.swift */,
+			);
+			path = ThemeViews;
+			sourceTree = "<group>";
+		};
 		00E356EF1AD99517003FC87E /* FacetecDemoTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,12 +229,19 @@
 		13B07FAE1A68108700A75B9A /* FacetecDemo */ = {
 			isa = PBXGroup;
 			children = (
+				005E78BE2AD45A4300B870D0 /* Config.swift */,
+				005E78C32AD4675A00B870D0 /* SupportingFiles */,
+				005E78AE2AD458D000B870D0 /* Processors */,
+				005E78AB2AD458A000B870D0 /* Utilities */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
+				005E78A72AD44DFE00B870D0 /* FacetecManager.swift */,
+				005E78A92AD44E2E00B870D0 /* Facetec.m */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				005E78A42AD44CB500B870D0 /* FacetecDemo-Bridging-Header.h */,
 			);
 			name = FacetecDemo;
 			sourceTree = "<group>";
@@ -99,11 +249,20 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				008F5E932AD5259F007E2EFE /* FaceTecSDK.xcframework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				5DCACB8F33CDC322A6C60F78 /* libPods-FacetecDemo.a */,
 				19F6CBCC0A4E27FBF8BF4A61 /* libPods-FacetecDemo-FacetecDemoTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6D05F9698141419B88B05F80 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A55CCE8FE7CA4FF5B6A2768D /* app_store.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -122,6 +281,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				6D05F9698141419B88B05F80 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -184,6 +344,7 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
 				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				005E78F32AD4691300B870D0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -207,7 +368,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1410;
 					};
 				};
 			};
@@ -218,6 +379,10 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
+				es,
+				"pt-BR",
+				"pt-PT",
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
@@ -243,7 +408,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				005E78EF2AD4675A00B870D0 /* Assets.xcassets in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				2AF8203931E14A69894DBD18 /* app_store.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,8 +579,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				005E78DE2AD4675A00B870D0 /* NFCCardScanningAnimationView.swift in Sources */,
+				005E78E62AD4675A00B870D0 /* WellRoundedActivityIndicatorView.swift in Sources */,
+				005E78DD2AD4675A00B870D0 /* EKYCSuccessView.swift in Sources */,
+				005E78BB2AD458D100B870D0 /* EnrollmentProcessor.swift in Sources */,
+				005E78ED2AD4675A00B870D0 /* AdditionalReviewAnimationViewOrange.swift in Sources */,
+				0092AC682ADE68FD00987100 /* UIColor.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				005E78E92AD4675A00B870D0 /* NFCScanningAnimationViewRed.swift in Sources */,
+				005E78E42AD4675A00B870D0 /* EKYCScrollIndicatorAnimationView.swift in Sources */,
+				005E78EE2AD4675A00B870D0 /* NFCStartingAnimationView.swift in Sources */,
+				005E78DB2AD4675A00B870D0 /* PseudoFullscreenSuccessView.swift in Sources */,
+				005E78E02AD4675A00B870D0 /* AdditionalReviewAnimationViewRed.swift in Sources */,
+				005E78E52AD4675A00B870D0 /* NFCScanningAnimationViewBlack.swift in Sources */,
+				005E78EB2AD4675A00B870D0 /* WellRoundedSuccessView.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				005E78BD2AD458D100B870D0 /* PhotoIDScanProcessor.swift in Sources */,
+				005E78EA2AD4675A00B870D0 /* NFCCardStartingAnimationView.swift in Sources */,
+				005E78BF2AD45A4300B870D0 /* Config.swift in Sources */,
+				005E78E22AD4675A00B870D0 /* NFCScanningAnimationView.swift in Sources */,
+				005E78A82AD44DFE00B870D0 /* FacetecManager.swift in Sources */,
+				005E78B72AD458D100B870D0 /* LivenessCheckProcessor.swift in Sources */,
+				005E78EC2AD4675A00B870D0 /* EKYCUnsuccessView.swift in Sources */,
+				005E78E72AD4675A00B870D0 /* WellRoundedUnsuccessView.swift in Sources */,
+				005E78DC2AD4675A00B870D0 /* EKYCActivityIndicatorView.swift in Sources */,
+				005E78B92AD458D100B870D0 /* AuthenticateProcessor.swift in Sources */,
+				005E78BA2AD458D100B870D0 /* PhotoIDMatchProcessor.swift in Sources */,
+				005E78E32AD4675A00B870D0 /* NFCScanningAnimationViewGreen.swift in Sources */,
+				005E78B82AD458D100B870D0 /* ProcesingDelegate.swift in Sources */,
+				005E78E12AD4675A00B870D0 /* PseudoFullscreenUnsuccessView.swift in Sources */,
+				005E78AA2AD44E2E00B870D0 /* Facetec.m in Sources */,
+				005E78E82AD4675A00B870D0 /* PseudoFullscreenActivityIndicatorView.swift in Sources */,
+				005E78DF2AD4675A00B870D0 /* AdditionalReviewAnimationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +629,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-FacetecDemo-FacetecDemoTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -459,6 +657,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-FacetecDemo-FacetecDemoTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = FacetecDemoTests/Info.plist;
@@ -485,9 +684,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = F5L4D6JD5W;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = X75WL435JA;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FacetecDemo/Framework/FaceTecSDK-ios-9.6.54",
+					"$(PROJECT_DIR)/FacetecDemo/Framework/FaceTecSDK-ios-9.6.54/FaceTecSDK.xcframework/ios-arm64_x86_64-simulator",
+					"$(PROJECT_DIR)/FacetecDemo/Framework/FaceTecSDK-ios-9.6.54/FaceTecSDK.xcframework/ios-arm64",
+				);
 				INFOPLIST_FILE = FacetecDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -499,8 +706,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.safi.facetec;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.privat.facetec-sdk";
 				PRODUCT_NAME = FacetecDemo;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "FacetecDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -513,8 +722,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = F5L4D6JD5W;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = X75WL435JA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FacetecDemo/Framework/FaceTecSDK-ios-9.6.54",
+					"$(PROJECT_DIR)/FacetecDemo/Framework/FaceTecSDK-ios-9.6.54/FaceTecSDK.xcframework/ios-arm64_x86_64-simulator",
+					"$(PROJECT_DIR)/FacetecDemo/Framework/FaceTecSDK-ios-9.6.54/FaceTecSDK.xcframework/ios-arm64",
+				);
 				INFOPLIST_FILE = FacetecDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -526,8 +743,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.safi.facetec;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.privat.facetec-sdk";
 				PRODUCT_NAME = FacetecDemo;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "FacetecDemo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -606,6 +825,7 @@
 					"$(inherited)",
 					"-Wl",
 					"-ld_classic",
+					"-Wl -ld_classic ",
 				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
@@ -680,6 +900,7 @@
 					"$(inherited)",
 					"-Wl",
 					"-ld_classic",
+					"-Wl -ld_classic ",
 				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;

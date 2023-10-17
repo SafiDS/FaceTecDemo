@@ -1,79 +1,70 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Facetec - customize brand logo
 
-# Getting Started
+## Adding Images to React Native Project
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+1. **Place your image in the project directory:**
 
-## Step 1: Start the Metro Server
-
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
-
-To start Metro, run the following command from the _root_ of your React Native project:
+   Add your image to the React Native project. For example, if your image is located at `src/assets/facetec/app_store.png`, ensure that the image name contains only small alphabets and underscores (`_`).
 
 ```bash
-# using npm
-npm start
+src/
+|-- assets/
+|   |-- facetec/
+|       |-- app_store.png
 
-# OR using Yarn
-yarn start
+
 ```
 
-## Step 2: Start your Application
+# Installing `react-native-asset`
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+## Install `react-native-asset` globally:
 
-### For Android
+Open your terminal and run the following command:
 
 ```bash
-# using npm
-npm run android
+npm install -g react-native-asset
+# or with yarn
+yarn global add react-native-asset
 
-# OR using Yarn
-yarn android
+```
+# Configuring `react-native.config.js`
+
+## Create a `react-native.config.js` file:
+
+At the root of your project, create a file named `react-native.config.js`. Add the following content:
+
+```javascript
+module.exports = {
+  assets: ['./src/assets/facetec/app_store.png'],
+};
+
 ```
 
-### For iOS
+# Running `react-native-asset`
+
+## Run `react-native-asset` command:
+
+In your terminal, run the following command:
 
 ```bash
-# using npm
-npm run ios
+npx react-native-asset
 
-# OR using Yarn
-yarn ios
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+# Using Brand Logo Name in React Native Code
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+## Pass logo name to `brandLogoName`:
 
-## Step 3: Modifying your App
+In your React Native code, use the `RNFaceTec.setCustomization` method and pass the `brandLogoName` as shown below:
 
-Now that you have successfully run the app, let's modify it.
+```javascript
+import RNFaceTec from 'nativeModule/RNFaceTec';
+// ...
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+RNFaceTec.setCustomization({
+  Colors: themeColors,
+  brandLogoName: 'app_store',
+});
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
 
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+```
