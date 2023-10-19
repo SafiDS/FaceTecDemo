@@ -1,3 +1,4 @@
+// Import necessary modules and components.
 import React, {useCallback, useEffect, useState} from 'react';
 import {Alert, StyleSheet, View} from 'react-native';
 import {Button, Loader} from './src/components';
@@ -6,6 +7,7 @@ import {EventsButtons, sdkConfig} from './src/utils/constant';
 import {Type_Of_Native_Method} from './src/utils/enum';
 import Methods from './src/utils/methods';
 
+// Theme colors for the app.
 const themeColors = {
   outerBackgroundColor: '#EFEFEF',
   frameColor: '#DDDDDD',
@@ -19,25 +21,39 @@ const themeColors = {
   buttonColorDisabled: '#3498db',
 };
 
+// Main App component.
 const App = () => {
+
+  // Local state to manage user enroll ID.
   const [enrollUserId, setEnrollUserId] = useState('');
+
+  // Track SDK initialization status.
   const [isInitializingSDK, setInitializingSDK] = useState(true);
 
+  // Track ongoing processes like user enrollment, liveness check etc.
   const [isProcessing, setProcessing] = useState(false);
 
+
+  // Effect to initialize the FaceTec SDK and update the theme.
   useEffect(() => {
     updateTheme();
     RNFaceTec.initializeSDK(
       sdkConfig,
       () => {
+
+        // On success, update SDK initialization status.
         setInitializingSDK(false);
       },
       () => {
+
+        // On failure, also update SDK initialization status.
         setInitializingSDK(false);
       },
     );
   }, []);
 
+
+  // Update the theme of the SDK.
   const updateTheme = () => {
     RNFaceTec.setCustomization({
       Colors: themeColors,
@@ -45,6 +61,7 @@ const App = () => {
     });
   };
 
+  // Handle liveness check button press.
   const handleLivenessCheckPress = useCallback(() => {
     setProcessing(true);
     RNFaceTec.livenessCheck(
@@ -59,6 +76,7 @@ const App = () => {
     );
   }, []);
 
+  // Handle user enrollment button press.
   const handleEnrollUserPress = useCallback(() => {
     setProcessing(true);
     setEnrollUserId('');
@@ -78,6 +96,7 @@ const App = () => {
     );
   }, []);
 
+  // Handle user authentication button press.
   const handleAuthenticateUserPress = useCallback(() => {
     if (!enrollUserId) {
       Alert.alert('Please enroll first before trying authentication.');
@@ -97,6 +116,7 @@ const App = () => {
     );
   }, [enrollUserId]);
 
+  // Handle user identity check button press.
   const handleIdentityCheckUserPress = useCallback(() => {
     setProcessing(true);
     RNFaceTec.identityCheck(
@@ -111,6 +131,7 @@ const App = () => {
     );
   }, []);
 
+  // Handle user identity scan button press.
   const handleIdentityScanUserPress = useCallback(() => {
     setProcessing(true);
     RNFaceTec.identityScanOnly(
@@ -125,6 +146,8 @@ const App = () => {
     );
   }, []);
 
+
+  // Dispatch various native methods based on button press.
   const onButtonPress = (text: string, index: number) => {
     switch (index) {
       case Type_Of_Native_Method.livenessCheck:
@@ -145,6 +168,7 @@ const App = () => {
     }
   };
 
+  // Render a button based on its title and index.
   const renderButtonComponent = (title: string, index: number) => {
     return (
       <Button
@@ -157,6 +181,7 @@ const App = () => {
     );
   };
 
+  // Render the main App component.
   return (
     <View style={styles.container}>
       {isInitializingSDK ? (
@@ -168,6 +193,8 @@ const App = () => {
   );
 };
 
+
+// Styles for the App component.
 const styles = StyleSheet.create({
   container: {
     flex: 1,
