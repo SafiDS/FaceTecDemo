@@ -230,8 +230,8 @@ flatDir{ dirs '../' }
 ```
 Refer to the attached screenshot for further clarity.
 
+![Android_build_gradle_file](https://github.com/SafiDS/FaceTecDemo/assets/25033681/87c69327-8ff2-4c22-813a-e30d51a1ea37)
 
-![Android_build_gradle_file.png](..%2F..%2F..%2FAndroid_build_gradle_file.png)
 
 ### Step 3: Modify `android/app/build.gradle`
 In the dependencies object of the android/app/build.gradle file, add:
@@ -241,14 +241,16 @@ implementation 'com.facetec:facetec-sdk:9.6.51@aar'
 ```
 
 Refer to the attached screenshot for further clarity.
-![Android_app_build_gradle_File.png](..%2F..%2F..%2FAndroid_app_build_gradle_File.png)
+
+![Android_app_build_gradle_File](https://github.com/SafiDS/FaceTecDemo/assets/25033681/3b59d675-7c19-41f4-82a6-b126a1dc24d8)
+
 ### Step 4: Copy Processors
 - Copy the Processors folder located at `/android/app/src/main/java/Processors`.
 - Paste this folder in your React Native project at `/android/app/src/main/java/`.
 
 Refer to the attached screenshot for further clarity.
 
-![Android_Processors.png](..%2F..%2F..%2FAndroid_Processors.png)
+![Android_Processors](https://github.com/SafiDS/FaceTecDemo/assets/25033681/d7d828f1-533b-4ae9-a018-bf7f4969cedb)
 
 
 ### Step 5: Update Imports in Processors
@@ -271,8 +273,8 @@ to
 
 Refer to the attached screenshot for further clarity.
 
-![ANdroid_FacetecModule_Package_Files.png](..%2F..%2F..%2FANdroid_FacetecModule_Package_Files.png)
 
+![ANdroid_FacetecModule_Package_Files](https://github.com/SafiDS/FaceTecDemo/assets/25033681/1b7c1a5c-ff91-4f46-8d43-c78b224756eb)
 
 ### Step 6:  Update Package Name
 
@@ -287,7 +289,7 @@ Add the following line in the MainApplication.java file:
 
 Refer to the attached screenshot for further clarity.
 
-![Android_Import_native_module.png](..%2F..%2F..%2FAndroid_Import_native_module.png)
+![Android_Import_native_module](https://github.com/SafiDS/FaceTecDemo/assets/25033681/d27043a9-db51-4fde-bb81-2297886cd48d)
 
 ### Step 8:  Run Clean Command Before Testing on a Real Device
 
