@@ -206,7 +206,7 @@ ios/
 
 
 Refer to the attached screenshot for further clarity.
-![Screenshot 2023-10-17 at 9.23.30 PM.png](..%2F..%2F..%2FScreenshot%202023-10-17%20at%209.23.30%E2%80%AFPM.png)
+![Screenshot 2023-10-17 at 9.23.30 PM.png](https://i.ibb.co/196hBfF/Android-aar-file.png)
 
 ### Step 2: Modify `android/build.gradle`
 At the end of the android/build.gradle file, add the following code snippet:
@@ -230,7 +230,7 @@ flatDir{ dirs '../' }
 ```
 Refer to the attached screenshot for further clarity.
 
-![Android_build_gradle_file](https://github.com/SafiDS/FaceTecDemo/assets/25033681/87c69327-8ff2-4c22-813a-e30d51a1ea37)
+![Android_build_gradle_file](https://i.ibb.co/KjvRdFR/Android-build-gradle-file.png)
 
 
 ### Step 3: Modify `android/app/build.gradle`
@@ -242,7 +242,7 @@ implementation 'com.facetec:facetec-sdk:9.6.51@aar'
 
 Refer to the attached screenshot for further clarity.
 
-![Android_app_build_gradle_File](https://github.com/SafiDS/FaceTecDemo/assets/25033681/3b59d675-7c19-41f4-82a6-b126a1dc24d8)
+![Android_app_build_gradle_File](https://i.ibb.co/xsHxW4k/Android-app-build-gradle-File.png)
 
 ### Step 4: Copy Processors
 - Copy the Processors folder located at `/android/app/src/main/java/Processors`.
@@ -250,7 +250,7 @@ Refer to the attached screenshot for further clarity.
 
 Refer to the attached screenshot for further clarity.
 
-![Android_Processors](https://github.com/SafiDS/FaceTecDemo/assets/25033681/d7d828f1-533b-4ae9-a018-bf7f4969cedb)
+![Android_Processors](https://i.ibb.co/pvhxKnC/Android-Processors.png)
 
 
 ### Step 5: Update Imports in Processors
@@ -264,6 +264,8 @@ to
 
 ```import com.private.FaceTecModule;```
 
+![ANdroid_FacetecModule_Package_Files](https://i.ibb.co/qM5CWvx/Screenshot-2023-10-19-at-12-52-31-PM.png)
+
 
 ### Step 6: Copy FaceTec Java Files
 
@@ -274,11 +276,13 @@ to
 Refer to the attached screenshot for further clarity.
 
 
-![ANdroid_FacetecModule_Package_Files](https://github.com/SafiDS/FaceTecDemo/assets/25033681/1b7c1a5c-ff91-4f46-8d43-c78b224756eb)
+![ANdroid_FacetecModule_Package_Files](https://i.ibb.co/PMCvjHH/ANdroid-Facetec-Module-Package-Files.png)
 
 ### Step 6:  Update Package Name
 
 - Update the package name at the top of both `FaceTecModule.java` and `FaceTecPackage.java` to match your application's package name.
+
+![Android_Import_native_module](https://i.ibb.co/MScDMNW/Screenshot-2023-10-19-at-12-47-41-PM.png)
 
 
 ### Step 7:  Modify MainApplication.java
@@ -289,7 +293,7 @@ Add the following line in the MainApplication.java file:
 
 Refer to the attached screenshot for further clarity.
 
-![Android_Import_native_module](https://github.com/SafiDS/FaceTecDemo/assets/25033681/d27043a9-db51-4fde-bb81-2297886cd48d)
+![Android_Import_native_module](https://i.ibb.co/J3FxJfw/Android-Import-native-module.png)
 
 ### Step 8:  Run Clean Command Before Testing on a Real Device
 
